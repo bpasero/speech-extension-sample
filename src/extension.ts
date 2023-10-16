@@ -51,9 +51,6 @@ export function activate(context: vscode.ExtensionContext) {
 
 				await timeout(500);
 				emitter.fire({ status: vscode.SpeechToTextStatus.Recognized, text: 'And how do you debug?' });
-
-				await timeout(1000);
-				emitter.fire({ status: vscode.SpeechToTextStatus.Stopped });
 			})();
 
 			return {
